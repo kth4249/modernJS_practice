@@ -7,6 +7,7 @@ console.log(message);
 message = 'World';
 console.log(message);
 
+
 // let message = 'check error';
 // num = 5; // error : num is not defined
 
