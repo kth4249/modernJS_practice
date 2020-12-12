@@ -1,3 +1,4 @@
+// [연산자]
 // 기본적인 연산자는 생략
 // - 거듭제곱 연산자 **
 console.log( 2 ** 2 ); // 4  (2 * 2)
@@ -53,13 +54,36 @@ console.log( a ); // 7 (3 + 4의 결과)
 
 
 // 연습 문제 //
-let a = prompt("덧셈할 첫 번째 숫자를 입력해주세요.", 1);
-let b = prompt("덧셈할 두 번째 숫자를 입력해주세요.", 2);
+// a = prompt("덧셈할 첫 번째 숫자를 입력해주세요.", 1);
+// b = prompt("덧셈할 두 번째 숫자를 입력해주세요.", 2);
 
-console.log(a + b); // 12
+// console.log(a + b); // 12
 // 3이 나오도록 올바르게 고치시오.
 // 풀이
 // prompt 로 입력받은 것은 문자열로 입력되기 때문에
 // a + b를 했을 때 12가 나옴
 // 그러므로 답 =
 console.log(+a + +b);
+
+
+
+// [비교 연산자]
+
+// - null이나 undefined와 비교하기
+console.log(null === undefined); // false
+console.log(null == undefined); // true
+// 동등 연산자를 사용해 null과 undefined를 비교하면 특별한 규칙이 적용돼 true가 반환
+
+// - null vs 0
+console.log( null > 0 );  // (1) false
+console.log( null == 0 ); // (2) false
+console.log( null >= 0 ); // (3) true
+// 3번의 경우 참을 반환하는 이유는 (기타 비교 연산자의 동작 원리에 따라) null이 숫자형으로 변환돼 0이 되기 때문
+// 그런데 2번의 경우 거짓을 반환하는 이유는 
+// == (동등 연산자) 의 경우 null, undefined이외의 값과 비교할 경우 무조건 false 반환하기 때문
+
+
+// -비교가 불가능한 undefined
+console.log( undefined > 0 ); // false (1)
+console.log( undefined < 0 ); // false (2)
+console.log( undefined == 0 ); // false (3)
